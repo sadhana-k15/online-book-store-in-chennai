@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Book Heaven — Buy Books Online in Chennai | Online Book Store & Bookstore in India</title>
+<meta name="description" content="Book Heaven is Chennai's friendly online book store. Buy new releases, bestsellers, Tamil books, school textbooks, used & second hand books at best prices with fast delivery." />
+<meta name="keywords" content="buy books online Chennai, online book store, bookstore India, Tamil books, second hand books, textbooks, Book Heaven Chennai" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- Header -->
+<header class="site-header">
+  <div class="container nav">
+    <a href="#" class="logo">
+    <img src="book heaven image.jpeg" alt="Book Heaven">
+    <span>Book Heaven</span>
+</a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#books">Books</a>
+      <a href="#sellers">Sell with Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="cartBtn" aria-label="Cart">🛒 <span class="cart-count" id="cartCount">0</span></button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+    </div>
+    
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <h1>
+  Discover Your Next
+  <span class="accent">Favorite Book</span>
+</h1>
+      <p class="lead">New Releases, Bestsellers, Tamil Books & Textbooks — at the best prices, delivered to your doorstep across Tamil Nadu and India.</p>
+      
+      <form class="search-bar" onsubmit="handleSearch(event)">
+        <input type="text" id="searchInput" placeholder="Search by title, author, or genre..." />
+        <button type="submit">Search</button>
+      </form>
+      <div class="hero-buttons">
+    <a href="#books" class="btn primary">Shop Now</a>
+    <a href="#categories" class="btn secondary">Browse Categories</a>
+</div>
+    
+</div>
+   <div class="hero-right">
+
+    <div class="hero-stats">
+        <div>
+            <h3>5000+</h3>
+            <p>Books</p>
+        </div>
+
+        <div>
+            <h3>1200+</h3>
+            <p>Readers</p>
+        </div>
+
+        <div>
+            <h3>4.8★</h3>
+            <p>Rating</p>
+        </div>
+    </div>
+
+    <div class="featured-book">
+        <h3>📖 Featured Book</h3>
+        <p>Atomic Habits</p>
+        <img src="atomic habits.webp"alt="Atomic Habits">
+    </div>
+
+</div>
+  </div>
+</section>
+
+
+<!-- Categories -->
+<section class="section" id="categories">
+  <div class="container">
+    <h2 class="section-title">Shop by Category</h2>
+    <p class="section-sub">Curated collections for every reader in Chennai.</p>
+    <div class="cat-grid">
+      <div class="cat-card" onclick="filterBooks('Fiction')"><span>📕</span><h3>Fiction</h3></div>
+      <div class="cat-card" onclick="filterBooks('Non-Fiction')"><span>📗</span><h3>Non-Fiction</h3></div>
+      <div class="cat-card" onclick="filterBooks('Tamil')"><span>📙</span><h3>Tamil Books</h3></div>
+      <div class="cat-card" onclick="filterBooks('Textbook')"><span>📘</span><h3>Textbooks</h3></div>
+      <div class="cat-card" onclick="filterBooks('Children')"><span>🧸</span><h3>Children</h3></div>
+      <div class="cat-card" onclick="filterBooks('Second Hand')"><span>♻️</span><h3>Second Hand</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- Books -->
+<section class="section alt" id="books">
+  <div class="container">
+    <h2 class="section-title">Featured Books</h2>
+    <div class="filter-bar">
+      <button class="chip active" onclick="filterBooks('All', this)">All</button>
+      <button class="chip" onclick="filterBooks('Fiction', this)">Fiction</button>
+      <button class="chip" onclick="filterBooks('Non-Fiction', this)">Non-Fiction</button>
+      <button class="chip" onclick="filterBooks('Tamil', this)">Tamil</button>
+      <button class="chip" onclick="filterBooks('Textbook', this)">Textbooks</button>
+      <button class="chip" onclick="filterBooks('Children', this)">Children</button>
+      <button class="chip" onclick="filterBooks('Second Hand', this)">Second Hand</button>
+    </div>
+    <div class="book-grid" id="bookGrid"></div>
+  </div>
+</section>
+
+<!-- Why Us -->
+<section class="section" id="why">
+  <div class="container">
+    <h2 class="section-title">Why Book Heaven?</h2>
+    <div class="feature-grid">
+   <div class="feature">   
+  <div class="feat-icon">🚚</div>
+  <h3>Fast Chennai Delivery</h3>
+  <p>Quick, safe packaging across the city with free delivery offers.</p>
+</div>
+
+<div class="feature">
+  <div class="feat-icon">💰</div>
+  <h3>Best Prices</h3>
+  <p>Competitive pricing on new and second hand titles.</p>
+</div>
+
+<div class="feature">
+  <div class="feat-icon">📚</div>
+  <h3>Huge Selection</h3>
+  <p>From Tamil classics to academic textbooks — all in one store.</p>
+</div>
+
+<div class="feature">
+  <div class="feat-icon">💬</div>
+  <h3>Friendly Support</h3>
+  <p>Order tracking and satisfaction-first returns on eligible items.</p>
+</div>
+
+<div class="feature">
+  <div class="feat-icon">⭐</div>
+  <h3>Trusted by Readers</h3>
+  <p>More than 1200+ happy readers trust Book Heaven.</p>
+</div>
+
+<div class="feature">
+  <div class="feat-icon">🔒</div>
+  <h3>Secure Payments</h3>
+  <p>Safe and secure online payment experience.</p>
+</div>
+    
+  </div>
+</section>
+
+<!-- Sellers -->
+<section class="section alt" id="sellers">
+  <div class="container two-col">
+    <div>
+      <h2 class="section-title left">Sell with Book Heaven</h2>
+      <p>For publishers and independent sellers — list your titles easily and reach readers across Tamil Nadu and India. From self-help and literary fiction to academic textbooks, our platform helps you grow.</p>
+      <ul class="check-list">
+        <li>✅ Simple onboarding</li>
+        <li>✅ Reach readers across India</li>
+        <li>✅ Transparent pricing</li>
+      </ul>
+      <a href="#contact" class="btn primary">Become a Seller</a>
+    </div>
+    <div class="seller-card">
+      <h3>Get Started Today</h3>
+      <form onsubmit="handleSeller(event)">
+        <input type="text" placeholder="Your name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="text" placeholder="Store / Publisher name" required />
+        <button type="submit" class="btn primary block">Apply Now</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact">
+  <div class="container">
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-sub">We're here to help with orders, recommendations, and seller queries.</p>
+    <form class="contact-form" onsubmit="handleContact(event)">
+      <input type="text" placeholder="Your name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Your message" rows="4" required></textarea>
+      <button type="submit" class="btn primary">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container foot-grid">
+    <div>
+      <div class="logo"><span class="logo-mark">📚</span><span class="logo-text">Book <span class="accent">Heaven</span></span></div>
+      <p>Chennai's friendly online book store. Buy books online at the best price.</p>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <a href="#categories">Categories</a>
+      <a href="#books">Bestsellers</a>
+      <a href="#books">New Arrivals</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="#sellers">Sell with Us</a>
+      <a href="#contact">Contact</a>
+      <a href="#why">About</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>📍 Chennai, Tamil Nadu</p>
+      <p>📞 +91 00000 00000</p>
+      <p>✉️ hello@bookheaven.in</p>
+    </div>
+  </div>
+  <div class="copy">© <span id="year"></span> Book Heaven. All rights reserved.</div>
+</footer>
+
+<!-- Cart Drawer -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-head"><h3>Your Cart</h3><button onclick="toggleCart()">✕</button></div>
+  <div id="cartItems" class="cart-items"><p class="muted">Your cart is empty.</p></div>
+  <div class="cart-foot">
+    <div class="total">Total: ₹<span id="cartTotal">0</span></div>
+    <button class="btn primary block" onclick="checkout()">Checkout</button>
+  </div>
+</div>
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+<script src="script.js"></script>
+<footer class="footer">
+  <div class="footer-content">
+    <h3>Book Heaven</h3>
+    <p>Your one-stop destination for Tamil books, novels, textbooks and bestsellers.</p>
+
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#books">Books</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <p class="copyright">
+      © 2026 Book Heaven. All Rights Reserved.
+    </p>
+  </div>
+</footer>
+</body>
+</html>
