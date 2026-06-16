@@ -48,7 +48,7 @@ const books = [
   old:599,
   category:"Fiction",
   badge:"Bestseller",
-  image:"the silent patient.jpg"
+  image:"the silent patient.jfif"
 },
 
 {
@@ -59,7 +59,7 @@ const books = [
   old:699,
   category:"Non-Fiction",
   badge:"Bestseller",
-  image:"atomic habits.webp"
+  image:"atomic habits.jpg"
 },
 
 {
@@ -70,7 +70,7 @@ const books = [
   old:1200,
   category:"Tamil",
   badge:"Classic",
-  image:"ponniyin selvan.jpg"
+  image:"ponniyin selvan.jfif"
 },
 
 {
@@ -92,7 +92,7 @@ const books = [
   old:399,
   category:"Children",
   badge:"Kids",
-  image:"the very hungry caterpillar.jpg"
+  image:"The Very Hungry Caterpillar.webp"
 },
 
 {
@@ -103,7 +103,7 @@ const books = [
   old:500,
   category:"Second Hand",
   badge:"Used",
-  image:"rich dad poor dad.webp"
+  image:"Rich Dad Poor Dad.jfif"
 },
 
 {
@@ -114,7 +114,7 @@ const books = [
   old:799,
   category:"Non-Fiction",
   badge:"New",
-  image:"sapience.jpg"
+ image:"Sapiens.png"
 },
 
 {
@@ -125,7 +125,7 @@ const books = [
   old:450,
   category:"Tamil",
   badge:"Tamil",
-  image:"mathorubagan.jfif"
+ image:"Mathorubagan.jpg"
 },
 
 {
@@ -136,7 +136,7 @@ const books = [
   old:420,
   category:"Textbook",
   badge:"School",
-  image:"physics NCERT XII.jfif"
+  image:"Physics NCERT XII.jfif"
 },
 
 {
@@ -147,7 +147,7 @@ const books = [
   old:399,
   category:"Non-Fiction",
   badge:"Inspiration",
-  image:"wings of fire.jfif"
+  image:"wings of fire.jpg"
 },
 
 {
@@ -158,7 +158,7 @@ const books = [
   old:699,
   category:"Children",
   badge:"Popular",
-  image:"harry potter.jfif"
+  image:"harry potter.jpg"
 },
 
 {
@@ -169,7 +169,7 @@ const books = [
   old:299,
   category:"Children",
   badge:"Kids",
-  image:"panchatantra stories.webp"
+  image:"panchatantra.jfif"
 }
 ];
 // Cart
@@ -228,8 +228,9 @@ function handleSearch(e){
   if(results.length === 0) grid.innerHTML = `<p class="muted">No books found for "${q}".</p>`;
   else {
     grid.innerHTML = results.map(b => `
-      <div class="book-card">
-        <div class="book-cover" style="background:linear-gradient(135deg, ${b.color}, ${b.color}cc)">${b.title}</div>
+    <div class="book-cover">
+   <img src="${b.image}" alt="${b.title}">
+</div>
         <div class="book-info">
           <span class="badge ${b.badge==='Used'?'used':''}">${b.badge}</span>
           <div class="book-title">${b.title}</div>
